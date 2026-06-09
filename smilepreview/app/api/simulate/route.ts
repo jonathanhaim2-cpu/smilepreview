@@ -29,8 +29,7 @@ export async function POST(req: NextRequest) {
     const simulatedImageUrl = await generateSmileSimulation(
       base64,
       file.type,
-      analysis.issuesFound,
-      analysis.complexity
+      analysis.issuesFound
     );
 
     return NextResponse.json({ analysis, simulatedImageUrl });

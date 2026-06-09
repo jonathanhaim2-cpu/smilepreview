@@ -7,8 +7,7 @@ const REPLICATE_API_TOKEN = process.env.REPLICATE_API_TOKEN;
 export async function generateSmileSimulation(
   base64: string,
   mimeType: string,
-  issuesFound: string[],
-  complexity: string
+  issuesFound: string[]
 ): Promise<string | null> {
   if (!REPLICATE_API_TOKEN) return null;
 
