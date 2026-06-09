@@ -136,7 +136,7 @@ export const translations = {
     },
     compare: {
       headerTitle: "Clear Aligner Brand Comparison 2025",
-      headerSub: "Side-by-side comparison of Invisalign, Byte, Candid, and SmileDirectClub — pricing, features, and who each brand is best for.",
+      headerSub: "Side-by-side comparison of Invisalign, Byte, Candid, and NewSmile — pricing, features, and who each brand is best for.",
       bestFor: "Best for:",
       getStarted: "Get Started",
       priceRange: "Price Range",
@@ -349,7 +349,7 @@ export const translations = {
     },
     compare: {
       headerTitle: "Comparación de Marcas de Alineadores 2025",
-      headerSub: "Comparación lado a lado de Invisalign, Byte, Candid y SmileDirectClub — precios, características y para quién es mejor cada marca.",
+      headerSub: "Comparación lado a lado de Invisalign, Byte, Candid y NewSmile — precios, características y para quién es mejor cada marca.",
       bestFor: "Mejor para:",
       getStarted: "Comenzar",
       priceRange: "Rango de Precios",
@@ -562,7 +562,7 @@ export const translations = {
     },
     compare: {
       headerTitle: "השוואת מותגי יישור שיניים שקוף 2025",
-      headerSub: "השוואה זה לצד זה של Invisalign, Byte, Candid ו-SmileDirectClub — מחירים, תכונות ולמי כל מותג מתאים.",
+      headerSub: "השוואה זה לצד זה של Invisalign, Byte, Candid ו-NewSmile — מחירים, תכונות ולמי כל מותג מתאים.",
       bestFor: "הטוב ביותר עבור:",
       getStarted: "התחל עכשיו",
       priceRange: "טווח מחירים",
@@ -775,7 +775,7 @@ export const translations = {
     },
     compare: {
       headerTitle: "Comparaison des Marques d'Aligneurs 2025",
-      headerSub: "Comparaison côte à côte d'Invisalign, Byte, Candid et SmileDirectClub — prix, fonctionnalités et pour qui chaque marque convient le mieux.",
+      headerSub: "Comparaison côte à côte d'Invisalign, Byte, Candid et NewSmile — prix, fonctionnalités et pour qui chaque marque convient le mieux.",
       bestFor: "Idéal pour :",
       getStarted: "Commencer",
       priceRange: "Gamme de Prix",

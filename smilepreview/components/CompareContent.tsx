@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Check, X, Star, ExternalLink } from "lucide-react";
+import { Check, X, Star, ExternalLink, ShoppingCart } from "lucide-react";
 import AdSlot from "@/components/AdSlot";
 import { useLang } from "@/components/LanguageProvider";
 
@@ -12,7 +12,7 @@ const brands = [
     doctorType: "In-person orthodontist", caseRange: "Mild to Severe",
     warranty: "Refinements included", financing: "CareCredit, provider plans",
     rating: 4.8, reviewCount: "100k+", bestFor: "All cases, especially complex",
-    affiliateUrl: "#invisalign",
+    affiliateUrl: "https://www.invisalign.com/find-a-doctor?utm_source=alignersteeth",
     pros: ["Widest case range — treats complex cases", "Proprietary SmartTrack® material", "3D ClinCheck simulation before treatment", "Attachments for precise tooth control", "80,000+ trained providers worldwide"],
     cons: ["Most expensive option", "Requires regular office visits", "Not available without a licensed provider"],
     features: { hfvTech: false, attachments: true, inPersonVisits: true, ongoingMonitoring: true, nightOnlyOption: false, whitening: false, retainersIncluded: false, fsaEligible: true },
@@ -22,33 +22,90 @@ const brands = [
     price: "$1,895–$2,295", avgPrice: 1895, time: "3–5 months",
     doctorType: "Remote dentist (initial review)", caseRange: "Mild only",
     warranty: "For-Life Guarantee", financing: "Affirm, $69+/mo",
-    rating: 4.5, reviewCount: "25k+", bestFor: "Mild crowding & speed",
-    affiliateUrl: "#byte",
+    rating: 4.5, reviewCount: "25k+", bestFor: "Mild crowding & fastest results",
+    affiliateUrl: "https://www.byte.com/?utm_source=alignersteeth",
     pros: ["HyperByte® vibration accelerator (free)", "Fastest treatment time available", "For-Life Guarantee", "All-inclusive flat pricing", "At-home convenience"],
     cons: ["Mild cases only", "Minimal ongoing clinical oversight", "No attachments available"],
     features: { hfvTech: true, attachments: false, inPersonVisits: false, ongoingMonitoring: false, nightOnlyOption: true, whitening: true, retainersIncluded: true, fsaEligible: true },
   },
   {
-    name: "Candid", initial: "C", color: "#8B5CF6",
-    price: "$2,400–$3,200", avgPrice: 2800, time: "6–12 months",
-    doctorType: "Remote orthodontist (ongoing)", caseRange: "Mild to Moderate",
-    warranty: "6-month coverage", financing: "Monthly plans from ~$89/mo",
-    rating: 4.6, reviewCount: "10k+", bestFor: "Supervised remote treatment",
-    affiliateUrl: "#candid",
-    pros: ["Ongoing orthodontist monitoring (weekly scans)", "Board-certified orthodontists only", "Candid Studios for professional scanning", "Good safety profile"],
-    cons: ["Not suitable for complex cases", "More expensive than other at-home brands", "Limited studio locations"],
-    features: { hfvTech: false, attachments: false, inPersonVisits: false, ongoingMonitoring: true, nightOnlyOption: false, whitening: false, retainersIncluded: true, fsaEligible: true },
+    name: "AlignerCo", initial: "A", color: "#8B5CF6",
+    price: "$945–$1,145", avgPrice: 1045, time: "4–6 months",
+    doctorType: "Remote dentist review", caseRange: "Mild only",
+    warranty: "Smile Guarantee", financing: "From $39/mo",
+    rating: 4.3, reviewCount: "8k+", bestFor: "Tightest budget, mild cases",
+    affiliateUrl: "https://alignerco.com/?utm_source=alignersteeth",
+    pros: ["Lowest price on the market ($945)", "Free whitening included", "Night-only plan available", "Simple at-home impression kit", "HSA/FSA eligible"],
+    cons: ["Mild cases only", "No in-person visits", "Less established brand", "Longer shipping times reported"],
+    features: { hfvTech: false, attachments: false, inPersonVisits: false, ongoingMonitoring: false, nightOnlyOption: true, whitening: true, retainersIncluded: true, fsaEligible: true },
   },
   {
-    name: "SmileDirectClub", initial: "S", color: "#F59E0B",
-    price: "$1,950", avgPrice: 1950, time: "4–6 months",
-    doctorType: "Remote dentist (initial only)", caseRange: "Very mild only",
-    warranty: "Smile Guarantee (conditional)", financing: "From $65/mo",
-    rating: 3.9, reviewCount: "50k+", bestFor: "Very mild cases, lowest cost",
-    affiliateUrl: "#smiledirect",
-    pros: ["Affordable flat pricing ($1,950)", "Large SmileShop network (1,500+ locations)", "Night plan available"],
-    cons: ["Minimal ongoing clinical oversight", "Higher complaint rate than competitors", "Limited case range", "History of legal/regulatory scrutiny"],
-    features: { hfvTech: false, attachments: false, inPersonVisits: false, ongoingMonitoring: false, nightOnlyOption: true, whitening: false, retainersIncluded: true, fsaEligible: true },
+    name: "NewSmile", initial: "N", color: "#F59E0B",
+    price: "$1,149–$1,649", avgPrice: 1399, time: "4–6 months",
+    doctorType: "Remote licensed dentist", caseRange: "Mild to Moderate",
+    warranty: "Smile Guarantee", financing: "From $49/mo (0% APR)",
+    rating: 4.4, reviewCount: "12k+", bestFor: "Best value mid-range option",
+    affiliateUrl: "https://www.newsmile.com/?utm_source=alignersteeth",
+    pros: ["Competitive pricing with good quality", "Free whitening & retainer included", "0% APR financing available", "Remote dentist monitoring", "Night aligner option"],
+    cons: ["Mild to moderate cases only", "No in-person visits", "Newer brand — less long-term data"],
+    features: { hfvTech: false, attachments: false, inPersonVisits: false, ongoingMonitoring: true, nightOnlyOption: true, whitening: true, retainersIncluded: true, fsaEligible: true },
+  },
+];
+
+const amazonProducts = [
+  {
+    name: "Crest 3D Whitestrips Professional Effects",
+    description: "Most popular whitening strips. 20 treatments, noticeably whiter in 3 days.",
+    price: "~$40",
+    category: "Teeth Whitening",
+    url: "https://www.amazon.com/s?k=crest+3d+whitestrips+professional+effects&tag=alignersteeth-20",
+    badge: "Best Seller",
+    badgeColor: "bg-orange-500",
+  },
+  {
+    name: "Oral-B iO Series 4 Electric Toothbrush",
+    description: "AI-powered brushing with 5 modes. Perfect for aligner wearers.",
+    price: "~$80",
+    category: "Electric Toothbrush",
+    url: "https://www.amazon.com/s?k=oral-b+io+series+electric+toothbrush&tag=alignersteeth-20",
+    badge: "Editor's Pick",
+    badgeColor: "bg-blue-500",
+  },
+  {
+    name: "Waterpik Aquarius Water Flosser",
+    description: "Essential for cleaning around aligners and braces. 10 pressure settings.",
+    price: "~$60",
+    category: "Water Flosser",
+    url: "https://www.amazon.com/s?k=waterpik+aquarius+water+flosser&tag=alignersteeth-20",
+    badge: "Must Have",
+    badgeColor: "bg-teal-500",
+  },
+  {
+    name: "Retainer Brite Cleaning Tablets",
+    description: "Keep aligners crystal clear and odor-free. Works on all aligner brands.",
+    price: "~$12",
+    category: "Aligner Cleaner",
+    url: "https://www.amazon.com/s?k=retainer+brite+cleaning+tablets+aligners&tag=alignersteeth-20",
+    badge: "Great Value",
+    badgeColor: "bg-green-500",
+  },
+  {
+    name: "Colgate Optic White Pro Series Toothpaste",
+    description: "5% hydrogen peroxide toothpaste. Dentist-recommended whitening.",
+    price: "~$15",
+    category: "Whitening Toothpaste",
+    url: "https://www.amazon.com/s?k=colgate+optic+white+pro+series+toothpaste&tag=alignersteeth-20",
+    badge: "Top Rated",
+    badgeColor: "bg-purple-500",
+  },
+  {
+    name: "Philips Sonicare ProtectiveClean 4100",
+    description: "Gentle yet effective sonic toothbrush. Pressure sensor protects gums.",
+    price: "~$50",
+    category: "Electric Toothbrush",
+    url: "https://www.amazon.com/s?k=philips+sonicare+protectiveclean+4100&tag=alignersteeth-20",
+    badge: "Top Pick",
+    badgeColor: "bg-indigo-500",
   },
 ];
 
@@ -220,6 +277,44 @@ export default function CompareContent() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Amazon Products Section */}
+        <div className="mb-10">
+          <div className="flex items-center gap-3 mb-2">
+            <ShoppingCart className="w-6 h-6 text-orange-500" />
+            <h2 className="text-2xl font-bold text-gray-900">Essential Products for Aligner Wearers</h2>
+          </div>
+          <p className="text-gray-600 mb-6 text-sm">Everything you need to maximize your aligner results — available on Amazon.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {amazonProducts.map((product) => (
+              <a
+                key={product.name}
+                href={product.url}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-md hover:border-orange-200 transition-all group"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <span className={`text-xs font-bold text-white px-2.5 py-1 rounded-full ${product.badgeColor}`}>
+                    {product.badge}
+                  </span>
+                  <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-lg">{product.category}</span>
+                </div>
+                <h3 className="font-bold text-gray-900 text-sm mb-1.5 group-hover:text-orange-600 transition-colors leading-snug">
+                  {product.name}
+                </h3>
+                <p className="text-xs text-gray-500 mb-3 leading-relaxed">{product.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-gray-900">{product.price}</span>
+                  <span className="text-xs font-semibold text-orange-500 flex items-center gap-1">
+                    View on Amazon <ExternalLink className="w-3 h-3" />
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 mt-3">* As an Amazon Associate we earn from qualifying purchases.</p>
         </div>
 
         {/* Bottom CTA */}

@@ -21,9 +21,9 @@ const complexityColors = {
 };
 
 const brands = [
-  { brand: "Invisalign", logoInitial: "I", priceRange: "$3,000–$8,000", treatmentTime: "6–18 months", highlight: "Best for complex cases",    rating: 4.8, affiliateUrl: "#invisalign", color: "#2563EB" },
-  { brand: "Byte",       logoInitial: "B", priceRange: "$1,895–$2,295", treatmentTime: "3–5 months",  highlight: "Fastest mild-case results", rating: 4.5, affiliateUrl: "#byte",       color: "#10B981" },
-  { brand: "Candid",     logoInitial: "C", priceRange: "$2,400–$3,200", treatmentTime: "6–12 months", highlight: "Orthodontist-supervised",    rating: 4.6, affiliateUrl: "#candid",    color: "#8B5CF6" },
+  { brand: "Invisalign", logoInitial: "I", priceRange: "$3,000–$8,000", treatmentTime: "6–18 months", highlight: "Best for complex cases",    rating: 4.8, affiliateUrl: "https://www.invisalign.com/find-a-doctor?utm_source=alignersteeth", color: "#2563EB" },
+  { brand: "Byte",       logoInitial: "B", priceRange: "$1,895–$2,295", treatmentTime: "3–5 months",  highlight: "Fastest mild-case results", rating: 4.5, affiliateUrl: "https://www.byte.com/?utm_source=alignersteeth",                    color: "#10B981" },
+  { brand: "AlignerCo",  logoInitial: "A", priceRange: "$945–$1,145",   treatmentTime: "4–6 months",  highlight: "Most affordable option",    rating: 4.3, affiliateUrl: "https://alignerco.com/?utm_source=alignersteeth",                  color: "#8B5CF6" },
 ];
 
 export default function SimulatorResults({
