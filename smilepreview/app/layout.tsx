@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   keywords: ["clear aligners", "smile simulator", "invisalign", "teeth straightening", "orthodontics"],
   authors: [{ name: "SmilePreview" }],
   creator: "SmilePreview",
-  metadataBase: new URL("https://smilepreview.com"),
+  metadataBase: new URL("https://alignersteeth.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://smilepreview.com",
+    url: "https://alignersteeth.com",
     siteName: "SmilePreview",
     title: "SmilePreview — AI Smile Simulator for Clear Aligners",
     description:

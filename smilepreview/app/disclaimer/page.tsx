@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer — SmilePreview",
   description: "Important disclaimer about SmilePreview's AI smile simulation tool and content. For educational purposes only — not medical advice.",
-  alternates: { canonical: "https://smilepreview.com/disclaimer" },
+  alternates: { canonical: "https://alignersteeth.com/disclaimer" },
 };
 
 export default function DisclaimerPage() {

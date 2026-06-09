@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://smilepreview.com";
+  const base = "https://alignersteeth.com";
   const slugs = getAllSlugs();
 
   const staticRoutes: MetadataRoute.Sitemap = [

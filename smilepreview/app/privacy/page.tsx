@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy — SmilePreview",
   description: "SmilePreview privacy policy. Learn how we collect, use, and protect your data.",
-  alternates: { canonical: "https://smilepreview.com/privacy" },
+  alternates: { canonical: "https://alignersteeth.com/privacy" },
 };
 
 export default function PrivacyPage() {
@@ -81,7 +81,7 @@ export default function PrivacyPage() {
 
           <section>
             <h2>Contact</h2>
-            <p>For privacy-related questions, contact us at: <a href="mailto:privacy@smilepreview.com">privacy@smilepreview.com</a></p>
+            <p>For privacy-related questions, contact us at: <a href="mailto:privacy@alignersteeth.com">privacy@alignersteeth.com</a></p>
           </section>
         </div>
       </div>

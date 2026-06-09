@@ -99,7 +99,7 @@ export default function SimulatorPage() {
             "@context": "https://schema.org",
             "@type": "WebApplication",
             name: "SmilePreview AI Smile Simulator",
-            url: "https://smilepreview.com/simulator",
+            url: "https://alignersteeth.com/simulator",
             applicationCategory: "HealthApplication",
             operatingSystem: "Any",
             offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },

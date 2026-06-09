@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service — SmilePreview",
   description: "SmilePreview terms of service and conditions of use.",
-  alternates: { canonical: "https://smilepreview.com/terms" },
+  alternates: { canonical: "https://alignersteeth.com/terms" },
 };
 
 export default function TermsPage() {
@@ -83,7 +83,7 @@ export default function TermsPage() {
 
           <section>
             <h2>Contact</h2>
-            <p>For questions about these terms: <a href="mailto:legal@smilepreview.com">legal@smilepreview.com</a></p>
+            <p>For questions about these terms: <a href="mailto:legal@alignersteeth.com">legal@alignersteeth.com</a></p>
           </section>
         </div>
       </div>

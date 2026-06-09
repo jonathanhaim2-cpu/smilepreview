@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://smilepreview.com/sitemap.xml",
+    sitemap: "https://alignersteeth.com/sitemap.xml",
   };
 }

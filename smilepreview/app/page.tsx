@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "SmilePreview — Free AI Smile Simulator for Clear Aligners",
   description:
     "Upload your photo and see how clear aligners could transform your smile in seconds. Free AI-powered simulation with personalized treatment estimates.",
-  alternates: { canonical: "https://smilepreview.com" },
+  alternates: { canonical: "https://alignersteeth.com" },
 };
 
 const faqSchema = {

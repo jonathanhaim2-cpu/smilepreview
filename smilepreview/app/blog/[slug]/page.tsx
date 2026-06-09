@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return buildMetadata({
       title: meta.title,
       description: meta.description,
-      canonical: `https://smilepreview.com/blog/${meta.slug}`,
+      canonical: `https://alignersteeth.com/blog/${meta.slug}`,
     });
   } catch {
     return {};
