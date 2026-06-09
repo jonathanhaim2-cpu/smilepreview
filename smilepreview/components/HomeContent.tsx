@@ -1,16 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Upload, Cpu, Smile, Star, ChevronDown } from "lucide-react";
+import { ArrowRight, Upload, Cpu, Smile, Star, ChevronDown, ShoppingCart, ExternalLink } from "lucide-react";
 import AdSlot from "@/components/AdSlot";
 import AffiliateCard from "@/components/AffiliateCard";
 import { useLang } from "@/components/LanguageProvider";
 
 const brands = [
-  { brand: "Invisalign", logoInitial: "I", priceRange: "$3,000–$8,000", treatmentTime: "6–18 months", highlight: "Most cases, longest track record", rating: 4.8, affiliateUrl: "#invisalign", color: "#2563EB" },
-  { brand: "Byte",       logoInitial: "B", priceRange: "$1,895–$2,295", treatmentTime: "3–5 months",  highlight: "HyperByte® accelerator included free", rating: 4.5, affiliateUrl: "#byte",       color: "#10B981" },
-  { brand: "Candid",     logoInitial: "C", priceRange: "$2,400–$3,200", treatmentTime: "6–12 months", highlight: "Orthodontist-led remote care",         rating: 4.6, affiliateUrl: "#candid",    color: "#8B5CF6" },
-  { brand: "SmileDirect",logoInitial: "S", priceRange: "$1,950",        treatmentTime: "4–6 months",  highlight: "Lowest price, flexible financing",    rating: 3.9, affiliateUrl: "#smiledirect",color: "#F59E0B" },
+  { brand: "Invisalign", logoInitial: "I", priceRange: "$3,000–$8,000", treatmentTime: "6–18 months", highlight: "Best for complex cases",        rating: 4.8, affiliateUrl: "https://www.invisalign.com/find-a-doctor?utm_source=alignersteeth", color: "#2563EB" },
+  { brand: "Byte",       logoInitial: "B", priceRange: "$1,895–$2,295", treatmentTime: "3–5 months",  highlight: "HyperByte® accelerator — fastest results", rating: 4.5, affiliateUrl: "https://www.byte.com/?utm_source=alignersteeth",       color: "#10B981" },
+  { brand: "AlignerCo",  logoInitial: "A", priceRange: "$945–$1,145",   treatmentTime: "4–6 months",  highlight: "Most affordable clear aligners", rating: 4.3, affiliateUrl: "https://alignerco.com/?utm_source=alignersteeth",              color: "#8B5CF6" },
+  { brand: "NewSmile",   logoInitial: "N", priceRange: "$1,149–$1,649", treatmentTime: "4–6 months",  highlight: "Best value mid-range option",    rating: 4.4, affiliateUrl: "https://www.newsmile.com/?utm_source=alignersteeth",          color: "#F59E0B" },
+];
+
+const amazonProducts = [
+  { name: "Crest 3D Whitestrips Professional Effects", price: "~$40", badge: "Best Seller", url: "https://www.amazon.com/s?k=crest+3d+whitestrips+professional+effects&tag=alignersteeth-20" },
+  { name: "Waterpik Aquarius Water Flosser", price: "~$60", badge: "Must Have", url: "https://www.amazon.com/s?k=waterpik+aquarius+water+flosser&tag=alignersteeth-20" },
+  { name: "Oral-B iO Series Electric Toothbrush", price: "~$80", badge: "Editor's Pick", url: "https://www.amazon.com/s?k=oral-b+io+series+electric+toothbrush&tag=alignersteeth-20" },
+  { name: "Retainer Brite Cleaning Tablets", price: "~$12", badge: "Great Value", url: "https://www.amazon.com/s?k=retainer+brite+cleaning+tablets&tag=alignersteeth-20" },
 ];
 
 const blogPosts = [
@@ -144,6 +151,31 @@ export default function HomeContent() {
             ))}
           </div>
           <p className="text-center text-xs text-gray-400 mt-6">{h.brandsDisclosure}</p>
+        </div>
+      </section>
+
+      {/* Amazon Products */}
+      <section className="py-14 bg-orange-50 border-y border-orange-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-2">
+            <ShoppingCart className="w-6 h-6 text-orange-500" />
+            <h2 className="text-2xl font-bold text-gray-900">Aligner Essentials on Amazon</h2>
+          </div>
+          <p className="text-gray-600 text-sm mb-7">Products every aligner wearer needs — shipped fast.</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {amazonProducts.map((p) => (
+              <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer sponsored"
+                className="bg-white rounded-2xl border border-orange-100 p-4 hover:shadow-md hover:border-orange-300 transition-all group">
+                <span className="text-xs font-bold text-white bg-orange-500 px-2 py-0.5 rounded-full">{p.badge}</span>
+                <p className="text-sm font-semibold text-gray-800 group-hover:text-orange-600 mt-2 mb-1 leading-snug">{p.name}</p>
+                <div className="flex items-center justify-between mt-2">
+                  <span className="font-bold text-gray-900 text-sm">{p.price}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-orange-400" />
+                </div>
+              </a>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 mt-4">* As an Amazon Associate we earn from qualifying purchases.</p>
         </div>
       </section>
 
