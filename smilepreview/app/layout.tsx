@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,6 +71,9 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   );
 }
